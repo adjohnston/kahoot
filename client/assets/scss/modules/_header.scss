@@ -23,6 +23,8 @@
     }
 
     .header {
+      @include clearfix;
+
       padding: gap() gap(0.5) 0;
       color: $light-text;
     }
@@ -44,6 +46,7 @@
         text-decoration: none;
         color: $collapse-text;
 
+        float: right;
         position: relative;
         z-index: 2;
 
