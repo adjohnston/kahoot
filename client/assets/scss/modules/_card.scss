@@ -3,6 +3,10 @@
 //  ---------------
 
     .card {
+      @each $prefix in -webkit-, -moz-, null {
+        #{$prefix}user-select: none;
+      }
+      
       position: relative;
 
       &:before {
