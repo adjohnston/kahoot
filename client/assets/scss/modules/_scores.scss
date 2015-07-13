@@ -15,7 +15,10 @@
 
     //  scores cards
         .scores__cards {
-          height: calc(100vh - #{gap(4)});
+          // @include calc(height, 100vh - #{gap(4)});
+          height: -webkit-calc(100vh - #{gap(4)});
+          height:    -moz-calc(100vh - #{gap(4)});
+          height:         calc(100vh - #{gap(4)});
 
           overflow-x: hidden;
           overflow-y: auto;

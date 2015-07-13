@@ -3,7 +3,7 @@
 //  ------------------------------
 
     @mixin transform ($str) {
-      @each $prefix in -webkit-, -moz-, -ms-, -o-, "" {
+      @each $prefix in -webkit-, -moz-, -ms-, null {
         #{$prefix}transform: $str;
       }
     }

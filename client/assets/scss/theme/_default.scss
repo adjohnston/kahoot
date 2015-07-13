@@ -9,9 +9,9 @@
         .flag { @include transform(box-shadow 1s) }
 
         &:hover {
-          animation: cardSwing infinite 1s;
+          @include animation(cardSwing infinite 1s);
 
-          .flag { animation: cardSwingShadow infinite 1s }
+          .flag { @include animation(cardSwingShadow infinite 1s) }
         }
       }
 

@@ -1,0 +1,16 @@
+//  -------------------------
+//  calc : mixins : utilities
+//  -------------------------
+
+//  ------------------------------------------
+//  there is an issue with LibSass stripping
+//  whitespace characters cause Chrome to not
+//  understand calc formulas.
+//  ==  NOTE  ================================
+//  https://github.com/sass/libsass/issues/104
+//  ------------------------------------------
+    @mixin calc ($prop, $str) {
+      @each $prefix in -webkit-, -moz-, null {
+        #{$prop}: #{$prefix}calc(#{$str});
+      }
+    }

@@ -24,7 +24,10 @@
 
     //  sidebar items
         .sidebar__items {
-          min-height: calc(100vh - #{gap(13)});
+          // @include calc(height, 100vh - #{gap(13)});
+          height: -webkit-calc(100vh - #{gap(13)});
+          height:    -moz-calc(100vh - #{gap(13)});
+          height:         calc(100vh - #{gap(13)});
 
           overflow-x: hidden;
           overflow-y: auto;

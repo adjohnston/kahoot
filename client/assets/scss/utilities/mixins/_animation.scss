@@ -1,0 +1,9 @@
+//  ------------------------------
+//  animation : mixins : utilities
+//  ------------------------------
+
+    @mixin animation ($str) {
+      @each $prefix in -webkit-, -moz-, null {
+        #{$prefix}animation: $str;
+      }
+    }

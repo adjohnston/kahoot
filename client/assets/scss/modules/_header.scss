@@ -18,7 +18,9 @@
 
     @keyframes collapseHop {
       0%   { top: 0 }
-      70%  { top: gap(-0.125) }
+      50%  { top: gap(-0.125) }
+      55%  { top: 0 }
+      65%  { top: gap(-0.025) }
       100% { top: 0 }
     }
 
@@ -35,13 +37,14 @@
       }
 
       .header__collapse {
-        @include font-size(1.25, 2);
+        @include font-size(1.25, 1.5);
 
-        width: gap(2);
+        width: gap(1.5);
 
         background-color: $collapse-bg;
         border-radius: 50%;
 
+        font-family: $font-family-sans-serif;
         text-align: center;
         text-decoration: none;
         color: $collapse-text;
@@ -50,24 +53,25 @@
         position: relative;
         z-index: 2;
 
-        &:before {
-          content: "\2630";
-          display: block;
-          position: relative;
-        }
-
         &:focus {
           outline: none;
         }
 
         &:hover {
-          &:before {
-            @each $prefix in -webkit-, -moz-, null {
-              #{$prefix}animation: collapseHop 1s infinite;
-            }
-          }
-
           text-decoration: none;
           color: $collapse-text;
+
+          .header__collapse__icon {
+            @include animation(collapseHop 1s infinite);
+          }
         }
       }
+
+        .header__collapse__icon {
+          content: "☰";
+
+          color: $collapse-text;
+
+          display: block;
+          position: relative;
+        }
