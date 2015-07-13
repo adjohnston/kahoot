@@ -1,0 +1,50 @@
+//  -------------------
+//  app : manifest file
+//  -------------------
+
+    @import
+
+//  utilities
+    //  variables
+        "utilities/variables/colours",
+        "utilities/variables/typography",
+
+    //  functions
+        "utilities/functions/gap",
+
+    //  mixins
+        "utilities/mixins/breakpoint",
+        "utilities/mixins/font-size",
+        "utilities/mixins/transform",
+
+
+//  bootstrap
+    "bootstrap-settings",
+    "../../../public/bower/bootstrap-sass/assets/stylesheets/bootstrap",
+
+
+//  generic
+    "generic/layout",
+    "generic/list",
+    "generic/rules",
+    "generic/table",
+    "generic/typography",
+
+
+//  modules
+    "modules/card",
+    "modules/flag",
+    "modules/header",
+    "modules/scores",
+    "modules/sidebar",
+
+
+//  singulars
+    "singulars/buttons",
+    "singulars/collapse",
+    "singulars/lists",
+    "singulars/loader",
+
+
+//  theme
+    "theme/default";

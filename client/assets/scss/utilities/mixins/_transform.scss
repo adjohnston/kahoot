@@ -1,0 +1,9 @@
+//  ------------------------------
+//  transform : mixins : utilities
+//  ------------------------------
+
+    @mixin transform ($str) {
+      @each $prefix in -webkit-, -moz-, -ms-, -o-, "" {
+        #{$prefix}transform: $str;
+      }
+    }

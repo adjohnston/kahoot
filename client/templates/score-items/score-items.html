@@ -1,0 +1,41 @@
+<template name="ScoreItems">
+
+  {{#if Template.subscriptionsReady}}
+
+    <table class="sidebar__items">
+      <thead>
+        <tr>
+          <th>Items</th>
+          <th>QTY</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+      {{#each scores}}
+
+        <tr>
+          <td>{{this.key}}</td>
+          <td>{{this.count}}</td>
+          <td><b>{{total}}</b></td>
+        </tr>
+
+      {{else}}
+
+        <tr>
+          <td colspan="3">No scores added yet, you should get clicking!</td>
+        </tr>
+
+      {{/each}}
+
+      </tbody>
+    </table>
+
+  {{else}}
+
+    <div class="loader"><img src="/assets/images/kahoot.svg" alt="Loading…"></div>
+
+  {{/if}}
+
+</template>

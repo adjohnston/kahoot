@@ -1,0 +1,34 @@
+//  -----------------
+//  sidebar : modules
+//  -----------------
+
+//  sidebar
+    .sidebar {
+      @include breakpoint($min: $screen-sm-min) {
+        &.collapse { display: block }
+      }
+
+      min-height: 100vh;
+      height: 100%;
+      padding: gap();
+
+      background-color: $sidebar-bg;
+    }
+
+    //  sidebar header
+        .sidebar__header {
+          @include font-size(1.5);
+
+          margin-bottom: gap(0.5);
+        }
+
+    //  sidebar items
+        .sidebar__items {
+          min-height: calc(100vh - #{gap(13)});
+
+          overflow-x: hidden;
+          overflow-y: auto;
+        }
+
+    //  sidebar new
+        .sidebar__new { width: 100% }

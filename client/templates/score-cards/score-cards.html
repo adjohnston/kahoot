@@ -1,0 +1,19 @@
+<template name="ScoreCards">
+
+  {{#if Template.subscriptionsReady}}
+
+    <div class="container-fluid scores__cards">
+      <ul class="row block-list">
+        {{#each scores}}
+          {{> ScoreCard}}
+        {{/each}}
+      </ul>
+    </div>
+
+  {{else}}
+
+    <div class="loader"><img src="/assets/images/kahoot.svg" alt="Loading…"></div>
+
+  {{/if}}
+
+</template>

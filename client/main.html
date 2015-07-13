@@ -1,0 +1,43 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Kahoot!</title>
+
+  <meta name="description" content="A small game for Kahoot!">
+
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" media="screen">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+</head>
+
+<body>
+  <main class="col-xs-12 col-sm-9" role="main">
+    <header class="header flag">
+      <img class="header__logo" src="/assets/images/kahoot.svg" alt="Kahoot!">
+
+      <a class="visible-xs-inline-block header__collapse flag__middle" role="button" data-toggle="collapse" href="#sidebar" aria-expanded="false" aria-controls="sidebar" title="toggle scoresheet"></a>
+    </header>
+
+    <section class="scores">
+      <header class="scores__header">Items</header>
+
+      {{> ScoreCards}}
+
+    </section>
+  </main>
+
+  <aside id="sidebar" class="col-xs-12 col-sm-3 collapse sidebar" role="aside">
+    <header class="sidebar__header">Player Items</header>
+
+    {{> ScoreItems}}
+
+    <hr>
+
+    {{> Bonuses}}
+
+    <hr>
+
+    {{> Total}}
+    {{> NewGame}}
+  </aside>
+</body>

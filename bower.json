@@ -1,0 +1,17 @@
+{
+  "name": "Kahoot",
+  "devDependencies": {
+    "bootstrap-sass": "~3.3.5"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    ".meteor/local/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "modernizr": "~2.8.3"
+  }
+}

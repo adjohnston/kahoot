@@ -1,0 +1,10 @@
+//  -------------------
+//  buttons : singulars
+//  -------------------
+
+    .btn {
+      @include font-size(1.5, 2);
+
+      height: gap(2);
+      padding: 0 gap(0.5);
+    }

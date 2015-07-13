@@ -1,0 +1,36 @@
+//  --------------
+//  flag : modules
+//  --------------
+
+//  flag
+//  ----------------------------------------------
+//  flag allows you to position content vertically
+//  by using a wrapper around the content and then
+//  applying a position.
+//  ==  EXAMPLE  =================================
+//  <div class="flag">
+//    <div class="flag__middle">Content is centred
+//  </div>
+//  ----------------------------------------------
+    .flag {
+      width:  100%;
+      height: 100%;
+
+      display: table;
+    }
+
+      .flag__top, .flag__middle, .flag__bottom {
+        display: table-cell;
+      }
+
+      .flag__top {
+        vertical-align: top;
+      }
+
+      .flag__middle {
+        vertical-align: middle;
+      }
+
+      .flag__bottom {
+        vertical-align: bottom;
+      }

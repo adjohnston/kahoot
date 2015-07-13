@@ -1,0 +1,22 @@
+//  ---------------
+//  table : generic
+//  ---------------
+
+    table {
+      width: 100%;
+      margin-bottom: gap();
+    }
+
+      thead {}
+
+        th {
+          @include font-size(0.75);
+
+          padding-bottom: gap(0.25);
+        }
+
+      tbody {}
+
+        tr {}
+
+        td {}

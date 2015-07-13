@@ -1,0 +1,21 @@
+//  --------------
+//  list : generic
+//  --------------
+
+//  unordered & ordered lists
+    ul, ol { padding-left: gap() }
+
+      li { line-height: initial }
+
+
+//  definition list
+    dl { @include clearfix }
+
+      dt {
+        padding-right: gap(0.5);
+
+        float: left;
+        clear: left;
+      }
+
+      dd { float: left }

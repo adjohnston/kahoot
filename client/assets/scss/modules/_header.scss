@@ -1,0 +1,70 @@
+//  ----------------
+//  header : modules
+//  ----------------
+
+    @keyframes cardSwing {
+      0%   { transform: rotate(0deg)  }
+      33%  { transform: rotate(-1deg) }
+      66%  { transform: rotate(1deg)  }
+      100% { transform: rotate(0deg)  }
+    }
+
+    @keyframes cardSwingShadow {
+      0%   { box-shadow: 0 gap(0.2) 0 rgba(0, 0, 0, 0.25) }
+      33%  { box-shadow: gap(-0.2) gap(0.2) 0 rgba(0, 0, 0, 0.25) }
+      66%  { box-shadow: gap(0.2) gap(0.2) 0 rgba(0, 0, 0, 0.25) }
+      100% { box-shadow: 0 gap(0.2) 0 rgba(0, 0, 0, 0.25) }
+    }
+
+    @keyframes collapseHop {
+      0%   { top: 0 }
+      70%  { top: gap(-0.125) }
+      100% { top: 0 }
+    }
+
+    .header {
+      padding: gap() gap(0.5) 0;
+      color: $light-text;
+    }
+
+      .header__logo {
+        height: gap(2);
+        padding: 0 gap() gap(0.5) 0;
+      }
+
+      .header__collapse {
+        @include font-size(1.25, 2);
+
+        width: gap(2);
+
+        background-color: $collapse-bg;
+        border-radius: 50%;
+
+        text-align: center;
+        text-decoration: none;
+        color: $collapse-text;
+
+        position: relative;
+        z-index: 2;
+
+        &:before {
+          content: "\2630";
+          display: block;
+          position: relative;
+        }
+
+        &:focus {
+          outline: none;
+        }
+
+        &:hover {
+          &:before {
+            @each $prefix in -webkit-, -moz-, null {
+              #{$prefix}animation: collapseHop 1s infinite;
+            }
+          }
+
+          text-decoration: none;
+          color: $collapse-text;
+        }
+      }

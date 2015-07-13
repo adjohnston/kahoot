@@ -1,0 +1,27 @@
+//  ----------------
+//  scores : modules
+//  ----------------
+
+//  scores
+    .scores {}
+
+    //  scores header
+        .scores__header {
+          padding-left:  gap(0.5);
+          padding-right: gap(0.5);
+
+          color: $light-text;
+        }
+
+    //  scores cards
+        .scores__cards {
+          height: calc(100vh - #{gap(4)});
+
+          overflow-x: hidden;
+          overflow-y: auto;
+
+          > header {
+            padding-left:  gap(0.5);
+            padding-right: gap(0.5);
+          }
+        }

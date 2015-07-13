@@ -1,0 +1,12 @@
+//  --------------------
+//  collapse : singulars
+//  --------------------
+
+//  this is overwriting some styling set
+//  in bootstrap.
+
+    .collapse {
+      &.in {
+        position: absolute;
+      }
+    }

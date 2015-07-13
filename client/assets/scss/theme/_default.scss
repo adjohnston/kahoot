@@ -1,0 +1,19 @@
+//  ---------------
+//  default : theme
+//  ---------------
+
+    .scores__cards {
+      .card {
+        @include font-size(5);
+
+        .flag { @include transform(box-shadow 1s) }
+
+        &:hover {
+          animation: cardSwing infinite 1s;
+
+          .flag { animation: cardSwingShadow infinite 1s }
+        }
+      }
+
+      .card__body .flag { background-color: $card-body-bg }
+    }
