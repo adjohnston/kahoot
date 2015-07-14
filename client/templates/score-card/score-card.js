@@ -28,6 +28,12 @@
           Scores.update(this._id, {$inc: {'bonusTotal': this.value}});
         }
 
+        //  show notification then hide again
+        tmpl.$('.card__notify').addClass('show');
+        setTimeout(function () {
+          tmpl.$('.card__notify').removeClass('show');
+        }, 1500);
+
         Scores.update(this._id, {
           $set: { gameId: game._id },
           $inc: { count: 1,

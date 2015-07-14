@@ -5,11 +5,13 @@
 //  base
     $white:  #f9f9f9 !default;
     $black:  #000000 !default;
+    $yellow: #de804d !default;
     $purple: #7c54c1 !default;
 
 
 //  text
     $light-text: $white;
+    $dark-text:  $black;
 
 
 //  sidebar
@@ -23,4 +25,5 @@
 
 
 //  card
-    $card-body-bg: $white;
+    $card-body-bg:          $white;
+    $card-notify-icon-text: $yellow;

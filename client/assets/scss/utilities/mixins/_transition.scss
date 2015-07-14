@@ -1,0 +1,9 @@
+//  -------------------------------
+//  transition : mixins : utilities
+//  -------------------------------
+
+    @mixin transition ($str) {
+      @each $prefix in -webkit-, -moz-, null {
+        #{$prefix}transition: #{$str};
+      }
+    }

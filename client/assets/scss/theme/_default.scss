@@ -4,8 +4,8 @@
 
     .scores__cards {
       .card {
-        @include font-size(5);
-
+        .card__body { @include font-size(5) }
+        
         .flag { @include transform(box-shadow 1s) }
 
         &:hover {
