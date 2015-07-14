@@ -3,16 +3,23 @@
 //  -------------------------------
 
 //  base
-    $white:  #f9f9f9 !default;
-    $black:  #000000 !default;
-    $yellow: #de804d !default;
-    $purple: #7c54c1 !default;
-
+    $white:      #f9f9f9 !default;
+    $black:      #000000 !default;
+    $green:      #A0B046 !default;
+    $dark-green: #11644D !default;
+    $yellow:     #F2C94E !default;
+    $orange:     #F78145 !default;
+    $red:        #F24E4E !default;
+    $purple:     #7c54c1 !default;
 
 //  text
     $light-text: $white;
     $dark-text:  $black;
 
+
+//  body
+    $body-bg: $red;
+    
 
 //  sidebar
     $sidebar-bg: $white;

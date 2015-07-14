@@ -3,11 +3,11 @@
 //  ----------------
 
     @keyframes colourBg {
-      0%   { background-color: #11644D }
-      25%  { background-color: #A0B046 }
-      50%  { background-color: #F2C94E }
-      75%  { background-color: #F78145 }
-      100% { background-color: #F24E4E }
+      0%   { background-color: $dark-green }
+      25%  { background-color: $green }
+      50%  { background-color: $yellow }
+      75%  { background-color: $orange }
+      100% { background-color: $red }
     }
 
     * {
@@ -19,6 +19,7 @@
 
     body {
       @include animation(infinite 60s colourBg alternate);
-      
+
+      background-color: $body-bg;
       overflow: hidden;
     }
